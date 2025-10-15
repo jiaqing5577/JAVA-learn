@@ -1,3 +1,5 @@
+package _01base;
+
 import java.util.Scanner;
 
 public class date1 {
