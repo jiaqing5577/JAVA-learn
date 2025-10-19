@@ -1,5 +1,4 @@
-package _01base;// 1. 包和导入
-// package 语句声明当前类所在的包
+package _01base;// package 语句声明当前类所在的包
 // package learn1;
 // import java.util.Scanner; // 导入工具类
 

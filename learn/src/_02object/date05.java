@@ -33,7 +33,7 @@ public class date05 {
         this.secret = secret;
     }
     
-    // 静态方法示例 - 属于类而不是特定对象
+    // 静态方法示例 - 属于类而不是特定对象，可以通过类也可以通过对象调用。
     public static void printClassInfo() {
         System.out.println("这是Person类，用于创建人物对象");
     }
