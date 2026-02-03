@@ -74,9 +74,9 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 | Method | Route | Parameters | Description |
 |--------|-------|------------|-------------|
 | GET | `/api/health` | None | Health check |
-| GET | `/api/hello` | `name` (optional) | Greeting endpoint |
+| GET | `/api/hello` | `{name: string (query, optional)}` | Greeting endpoint |
 | POST | `/api/calculate` | `{number1: int, number2: int, operation: string}` | Calculator |
-| GET | `/api/person/{id}` | `id` (path) | Get person info |
+| GET | `/api/person/{id}` | `{id: int (path)}` | Get person info |
 | POST | `/api/person` | `{name: string, age: int}` | Create person |
 
 ## Documentation
