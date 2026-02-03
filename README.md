@@ -49,8 +49,8 @@ Example Spring Boot controller:
 public class ExampleController {
     
     @GetMapping("/hello")
-    public String hello(@RequestParam(required = false) String name) {
-        return "Hello, " + (name != null ? name : "World");
+    public String hello(@RequestParam(defaultValue = "World") String name) {
+        return "Hello, " + name;
     }
     
     @PostMapping("/data")
@@ -74,10 +74,10 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 | Method | Route | Parameters | Description |
 |--------|-------|------------|-------------|
 | GET | `/api/health` | None | Health check |
-| GET | `/api/hello` | `{name: string (query, optional)}` | Greeting endpoint |
-| POST | `/api/calculate` | `{number1: int, number2: int, operation: string}` | Calculator |
-| GET | `/api/person/{id}` | `{id: int (path)}` | Get person info |
-| POST | `/api/person` | `{name: string, age: int}` | Create person |
+| GET | `/api/hello` | `name` (query, optional) | Greeting endpoint |
+| POST | `/api/calculate` | Request body: `{number1: int, number2: int, operation: string}` | Calculator |
+| GET | `/api/person/{id}` | `id` (path, required) | Get person info |
+| POST | `/api/person` | Request body: `{name: string, age: int}` | Create person |
 
 ## Documentation
 
